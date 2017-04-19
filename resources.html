@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>IGM Student Survival Guide</title>
+
+    <!-- Bootstrap  - from bootstrap-3.3.7-dist.zip-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- import the google Roboto font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- downloaded latest version locally <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script src="js/jquery-3.2.0.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- from http://getbootstrap.com/components/#navbar -->
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="index.html">IGM Student Survival Guide</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="program.html">Programs</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div id="landing">
+                <h1>RESOURCES</h1>
+                <div class="col-md-3" id="labs" onclick="showContent('labs_content')">
+                    <img src="images/labs.png" alt="landing page" id="labs_image" width="100%" />
+                    <h2>LABS</h2>
+                </div>
+                <div class="col-md-3" id="industry_resources" onclick="showContent('industry_resources_content')">
+                    <img src="images/industry_resources.png" alt="industry resources" id="industry_resources_image" width="100%" />
+                    <h2>INDUSTRY RESOURCES</h2>
+                </div>
+                <div class="col-md-3" id="upcoming_events" onclick="showContent('upcoming_events_content')">
+                    <img src="images/upcoming_events.png" alt="upcoming events" id="upcoming_events_image" width="100%" />
+                    <h2>UPCOMING EVENTS</h2>
+                </div>
+                <div class="col-md-3" id="social_media" onclick="showContent('social_media_content')">
+                    <img src="images/social_media.png" alt="landing page" id="social_media_image" width="100%" />
+                    <h2>SOCIAL MEDIA</h2>
+                </div>
+            </div>
+
+            <!--  don't need an image here
+            <div class="col-md-4" id="content_graphic" style="display: none;">
+                <img src="images/sos.png" alt="landing page" id="sos_image" width="80%" />
+            </div>
+            <div class="col-md-7" id="main_container" align="center">
+            -->
+
+            <!-- resource content divs -->
+            <div id="labs_content" style="display: none;">
+                <div class="row">
+
+                    <!-- TODO: not sure how to add spacing, may add a larger margin or padding via css. -->
+                    <br>
+                    <br>
+                    <br>
+
+
+                    <div id="labs_main_heading">
+
+                        <h2 id="line2">LABS</h2>
+
+                        <div class="content" style="margin-top: 70px;">
+                            <div class="col-md-4" id="open_lab" onclick="showContent('open_lab_content')">
+                                <img src="images/open_lab.png" alt="open lab" id="open_lab_image" width="100%" />
+                                <h2>OPEN LAB</h2>
+                            </div>
+                            <div class="col-md-4" id="new_media_lab" onclick="showContent('new_media_lab_content')">
+                                <img src="images/new_media_lab.png" alt="new media lab" id="new_media_lab_image" width="100%" />
+                                <h2>NEW MEDIA LAB</h2>
+                            </div>
+                            <div class="col-md-4" id="sound_labs" onclick="showContent('sound_lab_content')">
+                                <img src="images/sound_lab.png" alt="sound lab" id="sound_lab_image" width="100%" />
+                                <h2>SOUND LAB</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- <div class="row"> -->
+            <div id="open_lab_schedule_content" style="display: none;">
+
+                <div class="col-md-4" id="content_graphic2">
+                    <img src="images/open_lab.png" alt="landing page" id="open_lab_image2" width="100%" />
+                </div>
+                <div class="col-md-4" id="open_lab_schedule" onclick="showContent('open_lab_schedule_content')">
+
+                    <div id="open_lab_schedule_content2">
+                        <h2 id="open_lab_heading">OPEN LAB</h2>
+
+                        <table style="width:100%">
+                            <tr>
+                                <th>Day</th>
+                                <th>Time</th>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>1:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Monday</td>
+                                <td>12:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td>12:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td>12:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Thursday</td>
+                                <td>12:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td>12:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>1:00PM - 12:00AM</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <br>
+
+                    <div id="open_lab_tutoring_content">
+                        <h2 id="open_lab_tutoring_heading">TUTORING</h2>
+
+                        <table style="width:100%">
+                            <tr>
+                                <th>Subject</th>
+                            </tr>
+                            <tr>
+                                <td>Interactive Design</td>
+                            </tr>
+                            <tr>
+                                <td>GDAPS</td>
+                            </tr>
+                            <tr>
+                                <td>Interact. Media`</td>
+                            </tr>
+                            <tr>
+                                <td>2D Animation</td>
+                            </tr>
+                            <tr>
+                                <td>Med Dev</td>
+                            </tr>
+                            <tr>
+                                <td>Data Struct.</td>
+                            </tr>
+                            <tr>
+                                <td>3D Animation</td>
+                            </tr>
+                            <tr>
+                                <td>Game Design</td>
+                            </tr>
+                            <tr>
+                                <td>Design</td>
+                            </tr>
+                            <tr>
+                                <td>Interact Immers.</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- </div> -->
+
+            <div class="col-md-4" id="new_media_lab_content_graphic" style="display: none;">
+                <img src="images/new_media_lab.png" alt="landing page" id="new_media_lab_image2" width="100%" />
+            </div>
+
+            <div id="new_media_lab_schedule_content" style="display: none;">
+
+                <div class="col-md-4" id="new_media_lab_schedule" onclick="showContent('new_media_lab_schedule_content')">
+
+                    <div id="new_media_lab_schedule_content2">
+                        <h2 id="new_media_lab_heading">NEW MEDIA LAB</h2>
+
+                        <table style="width:100%">
+                            <tr>
+                                <th>Day</th>
+                                <th>Time</th>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>1:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Monday</td>
+                                <td>12:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td>12:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td>12:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Thursday</td>
+                                <td>12:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td>12:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>1:00PM - 12:00AM</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <br>
+
+                    <div id="new_media_lab_tutoring_content">
+                        <h2 id="new_media_lab_tutoring_heading">TUTORING</h2>
+
+                        <table style="width:100%">
+                            <tr>
+                                <th>Subject</th>
+                            </tr>
+                            <tr>
+                                <td>Interactive Design</td>
+                            </tr>
+                            <tr>
+                                <td>GDAPS</td>
+                            </tr>
+                            <tr>
+                                <td>Interact. Media`</td>
+                            </tr>
+                            <tr>
+                                <td>2D Animation</td>
+                            </tr>
+                            <tr>
+                                <td>Med Dev</td>
+                            </tr>
+                            <tr>
+                                <td>Data Struct.</td>
+                            </tr>
+                            <tr>
+                                <td>3D Animation</td>
+                            </tr>
+                            <tr>
+                                <td>Game Design</td>
+                            </tr>
+                            <tr>
+                                <td>Design</td>
+                            </tr>
+                            <tr>
+                                <td>Interact Immers.</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" id="sound_lab_content_graphic" style="display: none;">
+                <img src="images/sound_lab.png" alt="landing page" id="sound_lab_image2" width="100%" />
+            </div>
+
+            <div id="sound_lab_schedule_content" style="display: none;">
+
+                <div class="col-md-4" id="sound_lab_schedule" onclick="showContent('sound_lab_schedule_content')">
+
+                    <div id="sound_lab_schedule_content2">
+                        <h2 id="sound_lab_heading">SOUND LAB</h2>
+
+                        <table style="width:100%">
+                            <tr>
+                                <th>Day</th>
+                                <th>Time</th>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>1:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Monday</td>
+                                <td>12:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td>12:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td>12:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Thursday</td>
+                                <td>12:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td>12:00PM - 12:00AM</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>1:00PM - 12:00AM</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <br>
+
+                    <div id="sound_lab_tutoring_content">
+                        <h2 id="sound_lab_tutoring_heading">TUTORING</h2>
+
+                        <table style="width:100%">
+                            <tr>
+                                <th>Subject</th>
+                            </tr>
+                            <tr>
+                                <td>Interactive Design</td>
+                            </tr>
+                            <tr>
+                                <td>GDAPS</td>
+                            </tr>
+                            <tr>
+                                <td>Interact. Media`</td>
+                            </tr>
+                            <tr>
+                                <td>2D Animation</td>
+                            </tr>
+                            <tr>
+                                <td>Med Dev</td>
+                            </tr>
+                            <tr>
+                                <td>Data Struct.</td>
+                            </tr>
+                            <tr>
+                                <td>3D Animation</td>
+                            </tr>
+                            <tr>
+                                <td>Game Design</td>
+                            </tr>
+                            <tr>
+                                <td>Design</td>
+                            </tr>
+                            <tr>
+                                <td>Interact Immers.</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="industry_resources_content" style="display: none;">
+                <div id="industry_resources_main_heading">
+
+                    <div class="col-md-4" id="industry_resources2" onclick="showContent('industry_resources_content')">
+                        <img src="images/co-op.png" alt="industry resources" id="industry_resources_image2" width="100%" />
+                        <h2 id="industry_resources_heading">INDUSTRY RESOURCES</h2>
+                    </div>
+
+                    <div class="col-md-7 resource_content">
+                        <br>
+                        <br>
+                        <br>
+                        <h2>IGME CO-OP</h2>
+                        <br>
+                        <h3>About</h3>
+                        <p>A Co-Op is similar to a paid internship. You will spend time working with a company to gain some experience working in your field before you graduate. Students must take two Co-Ops sometime during the last three years of their
+                            program. A Co-Op is the length of one academic term, and can be taken during the summer as well as the fall or spring semesters.
+                        </p>
+                        <h3>The Co-Op Search</h3>
+                        <p>Finding a Co-Op can seem like a daunting task, but there are resources out there to make the process simpler for you. Career Fairs happen throughout the year, during which approximately 250 companies gather in the Gordon Field
+                            House here at RIT looking for potential hires. Another great resource is Job Zone, where information about potential jobs and Co-Ops are posted.</p>
+                        <h3>Prepare for Interviews</h3>
+                        <p>While you are on the Co-Op hunt, do what you can to prepare for the interview. One way to prepare is researching the company before you interview with them. You will have more to talk about with the interviewer and they will likely
+                            be impressed about your knowledge of the company. This shows you are well prepared and interested in what they have to offer you.</p>
+                        <h3>Your Co-op Evaluation - Receiving Credit</h3>
+                        <p>At your Co-Op, your employer will fill out an evaluation toward the end of your time working with them. The employer will rate you on you performance at work and comment on your time spent with the company. Having a good evaluation
+                            is essential for passing your Co-Op.</p>
+                        <h3>Appointments and Office Hours</h3>
+                        <p>Call 585-475-2301 to make an appointment with your Career Services Coordinator who will assist you on a one-on-one basis with any aspect of your job search and related activities. </p>
+                        <p>Office Hours: Monday-Friday: 8:00 am – 4:30 pm</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="upcoming_events_content" style="display: none;">
+                <div id="upcoming_events_main_heading">
+
+                    <div class="col-md-4" id="upcoming_events_content2" onclick="showContent('upcoming_events_content')">
+                        <img src="images/upcoming_events.png" alt="upcoming events" id="upcoming_events_image2" width="100%" />
+                        <h2 id="upcoming_events_heading">EVENTS</h2>
+                    </div>
+
+                    <div class="col-md-7 resource_content">
+
+                        <h2>EVENTS</h2>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Friday, April 21st 2017</th>
+                                    </tr>
+                                </thead>
+                                  <tr>
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Spring Preview Day </th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>2:00 PM - 2:50 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Academic Options: Golisano Collage of Computing &amp; Information Sciences </td>
+                                        </tr>
+                                    </table>
+                                </tr>
+
+                                <tr>
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>New York Celebration of Women in Computing</th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>4:00 PM - 5:00 PM / Ingle Auditorium</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Keynote Speaker: Reshma Saujani, Founder &amp; CEO of Girls Who Code</td>
+                                        </tr>
+                                    </table>
+                                </tr>
+                         
+
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="social_media_content" style="display: none;">
+                <div id="main_heading">
+                    <div class="col-md-4" id="facebook">
+                        <a href="https://www.facebook.com/igmrit/"> <img src="images/facebook.png" alt="facebook" id="facebook_image" width="100%" /></a>
+                        <h2 id="facebook_heading">FACEBOOK</h2>
+                    </div>
+
+                    <div class="col-md-4" id="twitter">
+                        <a href="https://twitter.com/IGMRIT"> <img src="images/twitter.png" alt="twitter" id="twitter_image" width="100%" /></a>
+                        <h2 id="twitter_heading">TWITTER</h2>
+                    </div>
+
+                    <div class="col-md-4" id="instagram">
+                        <a href="https://www.instagram.com/explore/locations/390175563/school-of-interactive-games-and-media-at-rit/?hl=en"> <img src="images/instagram.png" alt="facebook" id="instagram_image" width="100%" /></a>
+                        <h2 id="instagram_heading">INSTAGRAM</h2>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <br <footer class="footer">
+    <div id="copyright">
+        <i class="text-muted copyright">&copy; IGME - 230 Spring 2017 - Web Design &amp; Implementation - Group4</i>
+    </div>
+
+    <script>
+        function showContent(project) {
+            var landingDiv = document.getElementById('landing');
+            var labsDiv = document.getElementById('labs_content');
+            var openLabContentDiv = document.getElementById('open_lab_schedule_content');
+
+            var newMediaLabContentDiv = document.getElementById('new_media_lab_schedule_content');
+            var new_media_lab_content_graphicDiv = document.getElementById('new_media_lab_content_graphic');
+
+            var soundLabContentDiv = document.getElementById('sound_lab_schedule_content');
+            var sound_lab_content_graphicDiv = document.getElementById('sound_lab_content_graphic');
+
+            var industryResourcesContentDiv = document.getElementById('industry_resources_content');
+            var upcomingEventsContentDiv = document.getElementById('upcoming_events_content');
+            var socialMediaDiv = document.getElementById('social_media_content');
+            var image = document.getElementById('content_graphic');
+            var image2 = document.getElementById('content_graphic2');
+
+            switch (project) {
+                case 'labs_content':
+                    landingDiv.style.display = 'none';
+                    labsDiv.style.display = 'initial';
+                    openLabContentDiv.style.display = 'none';
+                    newMediaLabContentDiv.style.display = 'none';
+                    soundLabContentDiv.style.display = 'none';
+                    sound_lab_content_graphicDiv.style.display = 'none';
+                    industryResourcesContentDiv.style.display = 'none';
+                    upcomingEventsContentDiv.style.display = 'none';
+                    socialMediaDiv.style.display = 'none';
+                    /* image.style.display = 'initial';
+                    image2.style.display = 'none'; */
+                    break;
+                case 'open_lab_content':
+                    landingDiv.style.display = 'none';
+                    labsDiv.style.display = 'none';
+                    openLabContentDiv.style.display = 'initial';
+                    newMediaLabContentDiv.style.display = 'none';
+                    soundLabContentDiv.style.display = 'none';
+                    sound_lab_content_graphicDiv.style.display = 'none';
+                    industryResourcesContentDiv.style.display = 'none';
+                    upcomingEventsContentDiv.style.display = 'none';
+                    socialMediaDiv.style.display = 'none';
+                    /* image.style.display = 'initial';
+                    image2.style.display = 'initial'; */
+                    break;
+                case 'new_media_lab_content':
+                    landingDiv.style.display = 'none';
+                    labsDiv.style.display = 'none';
+                    openLabContentDiv.style.display = 'none';
+                    new_media_lab_content_graphicDiv.style.display = 'initial';
+                    newMediaLabContentDiv.style.display = 'initial';
+                    soundLabContentDiv.style.display = 'none';
+                    sound_lab_content_graphicDiv.style.display = 'none';
+                    industryResourcesContentDiv.style.display = 'none';
+                    upcomingEventsContentDiv.style.display = 'none';
+                    socialMediaDiv.style.display = 'none';
+                    /* image.style.display = 'initial';
+                    image2.style.display = 'initial'; */
+                    break;
+                case 'sound_lab_content':
+                    landingDiv.style.display = 'none';
+                    labsDiv.style.display = 'none';
+                    openLabContentDiv.style.display = 'none';
+                    newMediaLabContentDiv.style.display = 'none';
+                    soundLabContentDiv.style.display = 'initial';
+                    sound_lab_content_graphicDiv.style.display = 'initial';
+                    industryResourcesContentDiv.style.display = 'none';
+                    upcomingEventsContentDiv.style.display = 'none';
+                    socialMediaDiv.style.display = 'none';
+                    /* image.style.display = 'initial';
+                    image2.style.display = 'initial'; */
+                    break;
+                case 'industry_resources_content':
+                    landingDiv.style.display = 'none';
+                    labsDiv.style.display = 'none';
+                    openLabContentDiv.style.display = 'none';
+                    newMediaLabContentDiv.style.display = 'none';
+                    soundLabContentDiv.style.display = 'none';
+                    sound_lab_content_graphicDiv.style.display = 'none';
+                    industryResourcesContentDiv.style.display = 'initial';
+                    upcomingEventsContentDiv.style.display = 'none';
+                    /* socialMediaDiv.style.display = 'none';
+                    image.style.display = 'initial'; */
+                    break;
+                case 'upcoming_events_content':
+                    landingDiv.style.display = 'none';
+                    labsDiv.style.display = 'none';
+                    openLabContentDiv.style.display = 'none';
+                    newMediaLabContentDiv.style.display = 'none';
+                    soundLabContentDiv.style.display = 'none';
+                    sound_lab_content_graphicDiv.style.display = 'none';
+                    industryResourcesContentDiv.style.display = 'none';
+                    upcomingEventsContentDiv.style.display = 'initial';
+                    socialMediaDiv.style.display = 'none';
+                    /* image.style.display = 'initial'; */
+                    break;
+                case 'social_media_content':
+                    landingDiv.style.display = 'none';
+                    labsDiv.style.display = 'none';
+                    openLabContentDiv.style.display = 'none';
+                    newMediaLabContentDiv.style.display = 'none';
+                    soundLabContentDiv.style.display = 'none';
+                    sound_lab_content_graphicDiv.style.display = 'none';
+                    industryResourcesContentDiv.style.display = 'none';
+                    upcomingEventsContentDiv.style.display = 'none';
+                    socialMediaDiv.style.display = 'initial';
+                    /* image.style.display = 'initial'; */
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
